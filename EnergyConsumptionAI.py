@@ -10,10 +10,10 @@ lightLevel = ctrl.Consequent(np.arange(0, 100, 0.1), 'lightLevel')
 
 #Fit Vector for timeOfDay
 timeOfDay['Daybreak'] = mf.trimf(timeOfDay.universe, [0, 0, 6.5])
-timeOfDay['Morning'] = mf.trimf(timeOfDay.universe, [6, 8, 11.5])
-timeOfDay['Noon'] = mf.trimf(timeOfDay.universe, [11, 13.5, 18])
-timeOfDay['Evening'] = mf.trimf(timeOfDay.universe, [17.5, 19.5, 21])
-timeOfDay['Night'] = mf.trapmf(timeOfDay.universe, [20.5, 21.5, 24, 24])
+timeOfDay['Morning'] = mf.trimf(timeOfDay.universe, [5, 8.5, 12])
+timeOfDay['Noon'] = mf.trimf(timeOfDay.universe, [11, 14, 18.5])
+timeOfDay['Evening'] = mf.trimf(timeOfDay.universe, [16, 19, 21])
+timeOfDay['Night'] = mf.trapmf(timeOfDay.universe, [20, 22, 24, 24])
 
 #Fit Vector for peopleNearby
 peopleNearby['No'] = mf.trimf(peopleNearby.universe, [0, 0, 1])
